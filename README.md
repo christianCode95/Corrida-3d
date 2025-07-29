@@ -36,6 +36,9 @@ It's lightweight, easy to play, and runs entirely in the browser—no downloads 
 style.css             -> Stylesheets
 script.js             -> Game scripts
 index.html            -> Main HTML file
+carro.gbl             -> GBL Model
+ceu.jpeg              -> Sky texture
+texturaPredio.jpg     -> Building texture
 README.md             -> Project information
 ```
 
