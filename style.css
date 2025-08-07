@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+canvas {
+  display: block;
+}
+
+.distancia {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+/* Botões para celular/tablet */
+.touch-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Por padrão, os controles são ocultos */
+.touch-controls {
+  display: none;
+}
+
+/* Estilo para dispositivos com toque ou telas menores */
+@media (pointer: coarse), (max-width: 1024px) {
+  .touch-controls {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+  }
+
+  .touch-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+  }
+}
